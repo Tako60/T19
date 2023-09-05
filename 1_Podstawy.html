@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    
-</body>
+    <h4>Dane Użytkownika</h4>
+<!-- metody w formularzu : GET, POST-->
+    <form method="get" action="2_form.html">
+        <label for="imie">Imię</label>
+        <input type ="text" name="imie" id="imie" size="10" maxlength="3" autofocus><br><br>
+        <label for="nazwisko">Nazwisko</label>
+        <input type ="text" name="nazwisko" id="nazwisko" autocomplete="off"><br><br>
+        <input type ="submit" value ="Wyślij">
+        <label for="haslo">Hasło</label>
+        <input type ="password" name ="haslo"><br><br>
+        <label for="color">Kolor<br><br></label>
+        <input type ="radio" name ="kolor" value="czerwony" id="kolor" checked>Czerwony<br><br>
+        <input type ="radio" name ="kolor" value="zielony" id="kolor">Zielony<br><br>
+        <input type ="radio" name ="kolor" value="czarny" id="kolor">Czarny<br><br>
+        <input type ="radio" name ="kolor" value="niebieski" id="kolor">Niebieski<br><br>
+        <input type ="submit" value ="Wyślij">
+        <label for="terms">Regulamin</label>
+        <input type="checkbox" name="terms" id="terms"><br><br>
+        <input type="submit" value="Wyślij">
 </html>
