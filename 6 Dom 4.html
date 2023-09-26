@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--Właściwości elementów-->
+<button id="btn1">EooE</button>
+<script>
+    const btn1 = document.querySelector("#btn1");
+        btn1.addEventListener("click", () => {
+            console.log(btn1)
+            console.dir(btn1)
+        });
+    //console . . . . . (zmienna)
+    //console.log
+    //console.dir
+</script>
+<br>
+<hr>
+<!-- innerHtml -->
+<button class="button" id="btn2">d-_-b</button>
+<script>
+    const btn2 = document.querySelector("#btn2")
+    btn2.addEventListener("click", () => {
+        console.log("%cKliknięto przycisk", "Color:#a05ac2; font-weight:bold")
+        console.dir(btn2)
+        console.log("innerHTML: ", btn2.innerHTML)
+        btn2.innerHTML="Kliknięto Przycisk"
+        console.log("innerHTML po kliknięciu przycisku: ", btn2.innerHTML)
+    })
+</script>
+
+<!--##########################################################################################-->
+<div id="divcontent">Brak danych</div>
+<button id="btn3">Zmień diva</button>
+<script>
+    const divcontent = document.querySelector("#divcontent")
+    const bnt3 = document.querySelector("#btn3")
+    btn3.addEventListener("click", () =>{ 
+    console.log(divcontent.innerHTML)
+    console.dir(divcontent)
+        divcontent.innerHTML = `
+        <div>
+            <h2>Dane Użytkownika</h2>
+            <p>Janusz <strong>Kowalski</strong></p>
+            <button disabled>Kliknij</button>
+            </div>
+    `;
+    }) 
+</script>
+<br><hr>
+<!--#########################################################################################-->
+<!--innerTEXT oraz textContent-->
+<div id="textContent">
+    <span style="display: none;">Ukryte</span>
+    <span>Widoczny span, obok dwa niewidoczne</span>
+    <span style="visibility:hidden">Niewidoczny</span>
+</div>
+<div id="textcontentB">
+    Imię i nazwisko: Dorota Wellmann
+</div>
+<button id="btn4">Kliknij</button>
+<script>
+    const btn4=document.querySelector("#btn4")
+    const textContent=document.querySelector("#textContent")
+    const textcontentB=document.querySelector("textcontentB")
+    btn4.addEventListener("click", () => {
+        console.log("%cUkryte spany: ", "color:#ab239a; font-weight:bold")
+        console.log("%cinnerHTML", "font-weight:bold")
+        console.log(textContent.innerHTML)
+        console.log("%cinnerHTML", "font-weight:bold")
+        console.log(textContent.innerHTML)
+        console.log("%cinnerHTML", "font-weight:bold")
+        console.log(textcontentB.innerHTML)
+    })
+</script>
+</body>
+</html>
